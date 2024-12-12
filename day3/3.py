@@ -1,10 +1,11 @@
+from operator import mul; import re
+
 """
-problem for regular expressions
+from operator import mul; import re
+print(eval('+'.join(re.findall(r'mul\(\d+,\d+\)', open('input.txt').read()))))
 """
-import re
+# part 1 above XDDD
 
-memory = open('input.txt', 'r')
-
-total = 0
-
-
+d = open('input.txt').read()
+for s in d, re.sub(r'don\'t\(\)[\s\S]*?(do\(\)|$)', '', d):
+    print(eval('+'.join(re.findall(r'mul\(\d+,\d+\)', s))))
